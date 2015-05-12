@@ -108,8 +108,6 @@ git-flow使得同时在多个Feature上面工作变得非常方便。 要初始�
 
 
 
-
-
 总结一下，要list/start/finish Feature分支，可以使用如下指令，这里的[base]参数必须是develop分支上的一个commit
 
 	git flow feature
@@ -123,11 +121,32 @@ git-flow使得同时在多个Feature上面工作变得非常方便。 要初始�
 	git flow feature pull <remote> <name>
 
 
-
 ##  Release分支相关操作
 
+当准备发布一个新版本时可以使用如下指令
 
-要list/start/finish Release分支，则使用如下指令，这里的[base]参数必须是develop分支上的一个commit
+	$ git flow release start 0.1.0
+
+结果如下图所示，我们看到创建了一个`release/0.1.0`分支，并且切换到这个分支，
+
+![](images/git-flow-release-start-0.1.0.png)
+
+
+完成这个分支以后执行如下指令
+
+	$ git flow release finish 0.1.0	
+
+如图所示，这个指令完成了如下事情
+
+- 将`release/0.1.0`分支合并进master
+- 在release上tag 'v0.1.0'
+- 删除本地的`release/0.1.0`分支删除
+- 最后切换到`master`分支
+
+![](images/git-flow-release-finish-0.1.0.png)
+
+
+总结一下，要list/start/finish Release分支，则使用如下指令，这里的[base]参数必须是develop分支上的一个commit
 
 	git flow release
 	git flow release start <release> [<base>]
