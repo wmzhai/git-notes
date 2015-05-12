@@ -92,11 +92,11 @@ git-flow使得同时在多个Feature上面工作变得非常方便。 要初始�
 
 如图所示，在feature初始化以后，我们可以通过`git branch`查看到当前处于`feature/f1`这个分支，而通过`git flow feature`这个指令我们可以看到目前总共有一个feature分支`f1`
 
-![](images/git-flow-feature-start.png)
+![](images/git-flow-feature-start-f1.png)
 
 我们可以再创一个`f2`分支，并查看如下
 
-
+![](images/git-flow-feature-start-f2.png)
 
 
 
