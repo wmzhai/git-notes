@@ -69,7 +69,24 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 - 命名：hotfix-*
 
 
-## 2. 初始化项目相关操作
+## 2. 安装git-flow
+
+### 2.1 [Ubuntu Linux](https://github.com/nvie/gitflow/wiki/Linux)
+
+	$sudo apt-get install -y git-flow
+
+### 2.2 [Mac OS](https://github.com/nvie/gitflow/wiki/Mac-OS-X)
+
+	$brew install git-flow
+
+### 2.3 [Windows](https://github.com/nvie/gitflow/wiki/Windows)
+
+	 
+
+
+
+
+## 3. 初始化项目相关操作
 
 可以在一个目录里执行`git flow init`，从而初始化项目，并自动生成多个分支。如果这时候执行`git branch`，会看到如下项目自动处于develop分支
 
@@ -84,12 +101,12 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 	$ git push origin develop
 
 
-## 3. Feature分支相关操作
+## 4. Feature分支相关操作
 
 git-flow使得同时在多个Feature上面工作变得非常方便。
 
 
-### Start Feature
+### 4.1 Start Feature
 
 	$ git flow feature start f1
 
@@ -102,7 +119,7 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 ![](images/git-flow-feature-start-f2.png)
 
 
-### Finish Feature
+### 4.2 Finish Feature
 
 	$ git flow feature finish f1
 
@@ -111,6 +128,8 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 ![](images/git-flow-feature-finishi-f1.png)
 
 
+
+### 4.3 指令总结
 
 总结一下，要list/start/finish Feature分支，可以使用如下指令，这里的[base]参数必须是develop分支上的一个commit
 
@@ -125,9 +144,9 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 	git flow feature pull <remote> <name>
 
 
-## 4. Release分支相关操作
+## 5. Release分支相关操作
 
-### Start Release
+### 5.1 Start Release
 
 	$ git flow release start 0.1.0
 
@@ -136,7 +155,7 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 ![](images/git-flow-release-start-0.1.0.png)
 
 
-### Finish Release
+### 5.2 Finish Release
 
 	$ git flow release finish 0.1.0	
 
@@ -149,6 +168,7 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 
 ![](images/git-flow-release-finish-0.1.0.png)
 
+### 5.3 指令总结
 
 总结一下，要list/start/finish Release分支，则使用如下指令，这里的[base]参数必须是develop分支上的一个commit
 
@@ -158,13 +178,13 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 
 
 
-## 5. Hotfix 分支相关操作
+## 6. Hotfix 分支相关操作
 
 
 因为我们始终保持`master`分支的生产状态，所以很容易基于生产状态fix一些issue。
 
 
-### Start Hotfix
+### 6.1 Start Hotfix
 
 	$ git flow hotfix start 0.1.1
 
@@ -173,7 +193,7 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 ![](images/git-flow-hotfix-start.png)
 
 
-### Finish Hotfix
+### 6.2 Finish Hotfix
 
 	$ git flow hotfix finish h1
 
@@ -181,7 +201,7 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 
 ![](images/git-flow-hotfix-finish.png)
 
-
+### 6.3 指令总结
 
 要list/start/finish Hotfix分支，则使用如下指令，这里的[base]参数必须是develop分支上的一个commit
 
@@ -189,4 +209,10 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 	git flow hotfix start <release> [<base>]
 	git flow hotfix finish <release>
 
+
+## 参考文献
+
+1. [Vincent Driessen，A successful Git branching model, January 05, 2010](http://nvie.com/posts/a-successful-git-branching-model/)
+2. [Jeff Kreeftmeijer, Using git-flow to automate your git branching workflow, August 29, 2010](http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/)
+3. [Gitflow @Github](https://github.com/nvie/gitflow) 
 
