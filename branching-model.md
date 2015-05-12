@@ -1,4 +1,4 @@
-# 基于GitFLow的分支策略及版本控制
+# Git分支模型及版本控制
 
 如下图所示，[Vincent Driessen分支模型](http://nvie.com/posts/a-successful-git-branching-model/)是一个团队开发时git分支，版本发布，bug修正的策略。这个流程的完整实施需要灵活使用多种指令，不过我们可以采用git-flow来将这个过程变得更加容易一些。 这里先介绍各个分支的含义，通过实例介绍各个指令。
 
