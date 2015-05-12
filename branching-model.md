@@ -86,7 +86,10 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 
 ## 3. Feature分支相关操作
 
-git-flow使得同时在多个Feature上面工作变得非常方便。 要初始化一个分支可以使用如下指令初始化f1这个feature
+git-flow使得同时在多个Feature上面工作变得非常方便。
+
+
+### Start Feature
 
 	$ git flow feature start f1
 
@@ -98,7 +101,8 @@ git-flow使得同时在多个Feature上面工作变得非常方便。 要初始�
 
 ![](images/git-flow-feature-start-f2.png)
 
-当完成一个Feature的时候，可以通过如下执行执行
+
+### Finish Feature
 
 	$ git flow feature finish f1
 
@@ -121,9 +125,9 @@ git-flow使得同时在多个Feature上面工作变得非常方便。 要初始�
 	git flow feature pull <remote> <name>
 
 
-##  Release分支相关操作
+## 4. Release分支相关操作
 
-当准备发布一个新版本时可以使用如下指令
+### Start Release
 
 	$ git flow release start 0.1.0
 
@@ -132,14 +136,14 @@ git-flow使得同时在多个Feature上面工作变得非常方便。 要初始�
 ![](images/git-flow-release-start-0.1.0.png)
 
 
-完成这个分支以后执行如下指令
+### Finish Release
 
 	$ git flow release finish 0.1.0	
 
 如图所示，这个指令完成了如下事情
 
 - 将`release/0.1.0`分支合并进master
-- 在release上tag 'v0.1.0'
+- 在release上tag `v0.1.0`
 - 删除本地的`release/0.1.0`分支删除
 - 最后切换到`master`分支
 
@@ -154,7 +158,29 @@ git-flow使得同时在多个Feature上面工作变得非常方便。 要初始�
 
 
 
-##  hotfix 分支相关操作
+## 5. Hotfix 分支相关操作
+
+
+因为我们始终保持`master`分支的生产状态，所以很容易基于生产状态fix一些issue。
+
+
+### Start Hotfix
+
+	$ git flow hotfix start 0.1.1
+
+结果如下显示，这个hotfix是基于master产生的，并且项目也切到了这个分支
+
+![](images/git-flow-hotfix-start.png)
+
+
+### Finish Hotfix
+
+	$ git flow hotfix finish h1
+
+结果如下显示，hotfix被合并到master
+
+![](images/git-flow-hotfix-finish.png)
+
 
 
 要list/start/finish Hotfix分支，则使用如下指令，这里的[base]参数必须是develop分支上的一个commit
