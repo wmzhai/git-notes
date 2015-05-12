@@ -81,9 +81,42 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 
 ### 2.3 [Windows](https://github.com/nvie/gitflow/wiki/Windows)
 
-	 
+#### 2.3.1 下载并安装msysgit
 
+#### 2.3.2 下载相应工具
 
+- [util-linux-ng](http://gnuwin32.sourceforge.net/packages/util-linux-ng.htm)下载
+- [libintl](http://gnuwin32.sourceforge.net/packages/libintl.htm)下载
+
+分别在两个项目网站页面中，找到Download部分，下载二进制压缩包，如下图：
+![](images/windows-tools-download.png)
+
+ 将两个文件夹解压
+可以在util-linux-ng-2.14.1-bin\bin找到 getopt.exe
+可以在libintl-0.14.4-bin\bin找到 libintl3.dll
+将这两个文件（getopt.exe和libintl3.dll）复制到msysgit安装目录下的bin目录中
+
+#### 2.3.3 克隆git flow项目
+
+      git://github.com/nvie/gitflow.git
+
+将此git项目克隆下来（注意，如果使用msysgit的git-bash进行克隆，可能会克隆到windows用户目录下）
+使用管理员权限打开cmd，并进入gitflow\contrib目录中
+将相应内容复制到msysgit安装目录中，如果msysgit安装到默认路径下（假设系统为64位windows7）
+
+	>msysgit-install.cmd "C:\Program Files (x86)\Git"
+
+如果安装成功，则会提示诸如“复制了 1 个文件”之类提示信息
+![](images/git-flow-windows-install-success.png)
+
+#### 2.3.4 测试git flow是否安装成功
+
+创建测试目录，使用git bash进入测试目录，执行
+
+    git flow init
+
+如果安装成功，则会出现“No branch exist yet”提示信息，说明在windows下的git flow安装成功
+![](images/git-flow-windows-test.png)
 
 
 ## 3. 初始化项目相关操作
