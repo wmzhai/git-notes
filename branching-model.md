@@ -166,9 +166,7 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 
 #### 2.3.1 下载并安装git
 
-[git下载](https://s3.amazonaws.com/github-cloud/releases/325827/8ddeba82-ce92-11e4-9812-db61045d243b.exe?response-content-disposition=attachment%3B%20filename%3DGit-1.9.5-preview20150319.exe&response-content-type=application/octet-stream&AWSAccessKeyId=AKIAISTNZFOVBIJMK3TQ&Expires=1431486019&Signature=qqHeUDfIw8VqBZVSVFykU5zrzlE%3D)
-
-如果下载不可用，请登录[官方网址](http://msysgit.github.io/)，点击“Download”
+点击[Windows Git官方网址](http://msysgit.github.io/)，点击“Download”
 
 下载完成后，请保持git的默认安装
 即64位系统安装目录为（C:\Program Files (x86)\Git）
