@@ -208,7 +208,7 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 
 
 
-	$git clone --recursive git://github.com/nvie/gitflow.git c:\gitflow 
+	$git clone --recursive git://github.com/nvie/gitflow.git
 
 	
 
