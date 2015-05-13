@@ -168,8 +168,8 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 
 点击[Windows Git官方网址](http://msysgit.github.io/)，点击“Download”
 
-下载完成后，请保持git的默认安装
-即64位系统安装目录为（C:\Program Files (x86)\Git）
+下载完成后，请保持git的默认安装   
+例如：64位系统安装目录为（C:\Program Files (x86)\Git）
 
 #### 2.3.2 下载相应工具
 
@@ -177,29 +177,31 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 
 - libintl [下载](http://gnuwin32.sourceforge.net/downlinks/libintl-bin-zip.php)
 
-将两个文件夹解压
+- libiconv2 [下载](http://gnuwin32.sourceforge.net/downlinks/libiconv-bin-zip.php)
+
+将三个文件夹解压
 
 可以在util-linux-ng-2.14.1-bin\bin找到 getopt.exe
 
 可以在libintl-0.14.4-bin\bin找到 libintl3.dll
 
-将这两个文件（getopt.exe和libintl3.dll）复制到git安装目录下的bin目录中
+可以在libiconv-1.9.2-1-bin\bin找到 libiconv2.dll
+
+将这三个文件（getopt.exe和libintl3.dll和libiconv2.dll）复制到git安装目录下的bin目录中（C:\Program Files (x86)\Git\bin）
 
 
 
 #### 2.3.3 克隆git flow项目
 
-请使用git bash进行克隆，在git bash中先进入c盘根目录（git bash中的命令和linux下的终端命令是一样的）
-
-	cd c:\
-
-然后克隆gitflow项目，(吐槽，git bash居然不能粘贴复制，自己一点点敲吧……)
+请使用git bash进行克隆gitflow项目(吐槽，git bash居然不能粘贴复制，自己一点点敲吧……)
 
 	$git clone --recursive git://github.com/nvie/gitflow.git
 
-克隆完成后，进入gitflow项目中的contrib目录
+克隆完成后，使用管理员运行cmd
 
-	$cd c:\gitflow\contrib
+在cmd中，进入gitflow项目中的contrib目录下
+
+	$cd gitflow\contrib
 
 安装gitflow到git的安装目录下
 
