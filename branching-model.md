@@ -197,7 +197,7 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 
 	$git clone --recursive git://github.com/nvie/gitflow.git
 
-克隆完成后，使用管理员运行cmd
+克隆完成后，运行cmd
 
 在cmd中，进入gitflow项目中的contrib目录下
 
