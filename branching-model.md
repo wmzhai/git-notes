@@ -166,31 +166,26 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 
 #### 2.3.1 下载并安装git
 
+[git下载](https://s3.amazonaws.com/github-cloud/releases/325827/8ddeba82-ce92-11e4-9812-db61045d243b.exe?response-content-disposition=attachment%3B%20filename%3DGit-1.9.5-preview20150319.exe&response-content-type=application/octet-stream&AWSAccessKeyId=AKIAISTNZFOVBIJMK3TQ&Expires=1431486019&Signature=qqHeUDfIw8VqBZVSVFykU5zrzlE%3D)
 
+如果下载不可用，请登录[官方网址](http://msysgit.github.io/)，点击“Download”
+
+下载完成后，请保持git的默认安装
+即64位系统安装目录为（C:\Program Files (x86)\Git）
 
 #### 2.3.2 下载相应工具
 
+- util-linux-ng [下载](http://downloads.sourceforge.net/gnuwin32/util-linux-ng-2.14.1-bin.zip)
 
+- libintl [下载](http://gnuwin32.sourceforge.net/downlinks/libintl-bin-zip.php)
 
-- [util-linux-ng](http://gnuwin32.sourceforge.net/packages/util-linux-ng.htm)下载
-
-- [libintl](http://gnuwin32.sourceforge.net/packages/libintl.htm)下载
-
-
-
-分别在两个项目网站页面中，找到Download部分，下载二进制压缩包，如下图：
-
-![](images/windows-tools-download.png)
-
-
-
- 将两个文件夹解压
+将两个文件夹解压
 
 可以在util-linux-ng-2.14.1-bin\bin找到 getopt.exe
 
 可以在libintl-0.14.4-bin\bin找到 libintl3.dll
 
-将这两个文件（getopt.exe和libintl3.dll）复制到msysgit安装目录下的bin目录中
+将这两个文件（getopt.exe和libintl3.dll）复制到git安装目录下的bin目录中
 
 
 
@@ -198,59 +193,34 @@ Release分支用来准备下一个产品发布分支，这个分支上可以做�
 
 请使用git bash进行克隆，在git bash中先进入c盘根目录（git bash中的命令和linux下的终端命令是一样的）
 
-
-
 	cd c:\
-
-
 
 然后克隆gitflow项目，(吐槽，git bash居然不能粘贴复制，自己一点点敲吧……)
 
-
-
 	$git clone --recursive git://github.com/nvie/gitflow.git
-
-	
 
 克隆完成后，进入gitflow项目中的contrib目录
 
-
-
 	$cd c:\gitflow\contrib
 
-	
-
-安装gitflow
-
-
+安装gitflow到git的安装目录下
 
 	>msysgit-install.cmd "C:\Program Files (x86)\Git"
-
-
 
 如果安装成功，则会提示诸如“复制了 1 个文件”之类提示信息
 
 ![](images/git-flow-windows-install-success.png)
 
 
-
 #### 2.3.4 测试git flow是否安装成功
-
-
 
 创建测试目录，使用git bash进入测试目录，执行
 
-
-
     git flow init
-
-
 
 如果安装成功，则会出现“No branch exist yet”提示信息，说明在windows下的git flow安装成功
 
 ![](images/git-flow-windows-test.png)
-
-
 
 
 
