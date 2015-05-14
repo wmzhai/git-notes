@@ -442,7 +442,7 @@ git-flow使得同时在多个Feature上面工作变得非常方便。
 
 
 
-	$ git flow hotfix finish h1
+	$ git flow hotfix finish 0.1.1
 
 
 
